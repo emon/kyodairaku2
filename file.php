@@ -29,7 +29,7 @@ if ($errors === 0) {
 			<key>PayloadDisplayName</key>
 			<string>Wi-Fi（MIAKO）</string>
 			<key>PayloadIdentifier</key>
-			<string>me.ryota-ka.kyotounivprofile.</string>
+			<string>me.ryota-ka.kyodairaku2.</string>
 			<key>PayloadOrganization</key>
 			<string>Ryota Kameoka</string>
 			<key>PayloadType</key>
@@ -89,7 +89,7 @@ EOT;
 			<key>PayloadDisplayName</key>
 			<string>IMAP アカウント（KUMOI）</string>
 			<key>PayloadIdentifier</key>
-			<string>me.ryota-ka.kyotounivprofile.メール</string>
+			<string>me.ryota-ka.kyodairaku2.メール</string>
 			<key>PayloadOrganization</key>
 			<string>Ryota Kameoka</string>
 			<key>PayloadType</key>
@@ -135,7 +135,7 @@ EOT;
 			<key>PayloadDisplayName</key>
 			<string>VPN（KUINS-PPTP）</string>
 			<key>PayloadIdentifier</key>
-			<string>me.ryota-ka.kyotounivprofile.VPN</string>
+			<string>me.ryota-ka.kyodairaku2.VPN</string>
 			<key>PayloadOrganization</key>
 			<string>Ryota Kameoka</string>
 			<key>PayloadType</key>
@@ -160,9 +160,9 @@ EOT;
 	<key>PayloadDescription</key>
 	<string>京都大学学生のための iPhone 構成プロファイルです。Wi-Fi (MIAKO), VPN (KUINS-PPTP), 学生用メール (KUMOI) の設定を一括で行います。</string>
 	<key>PayloadDisplayName</key>
-	<string>KyotoUnivProfile</string>
+	<string>京大ラクラク設定ツール for iPhone</string>
 	<key>PayloadIdentifier</key>
-	<string>me.ryota-ka.kyotounivprofile</string>
+	<string>me.ryota-ka.kyodairaku2</string>
 	<key>PayloadOrganization</key>
 	<string>Ryota Kameoka</string>
 	<key>PayloadRemovalDisallowed</key>
@@ -179,7 +179,7 @@ EOT;
 EOT;
 
   header('Content-type: application/x-apple-aspen-config; chatset=utf-8');
-  header('Content-Disposition: attachment; filename="kyoto_univ_profile_' . $ecsid . '.mobileconfig"');
+  header('Content-Disposition: attachment; filename="kyodairaku2' . $ecsid . '.mobileconfig"');
   echo $file;
 } else {
   echo 'invalid values!';
