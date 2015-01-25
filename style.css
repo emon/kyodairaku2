@@ -99,16 +99,19 @@ input[disabled="disabled"] {
 }
 
 #policy {
+  display: block;
   font-size: 12px;
   color: #bbb;
   padding-left: 3px;
   padding-right: 3px;
 }
 
-#policy p {
-  text-indent: 1em;
-  margin-top: 0;
-  margin-bottom: 0;
+#policy ul {
+  padding: 0 5px;
+}
+
+#policy li {
+  list-style-type: none;
 }
 
 h2 {
