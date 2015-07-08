@@ -42,10 +42,12 @@ if ($errors === 0) {
 			<string>None</string>
 			<key>SSID_STR</key>
 			<string>KUINS-Air</string>
+            <key>EncryptionType</key>
+			<string></string> 
 		</dict>
 		<dict>
 			<key>EmailAccountDescription</key>
-			<string>KUMOI</string>
+			<string>KUMail</string>
 			<key>EmailAccountType</key>
 			<string>EmailTypeIMAP</string>
 			<key>EmailAddress</key>
@@ -53,11 +55,12 @@ if ($errors === 0) {
 EOT;
   $file .= $localpart;
   $file .= <<< 'EOT'
-@st.kyoto-u.ac.jp</string>
+@kyoto-u.ac.jp
+</string>
 			<key>IncomingMailServerAuthentication</key>
 			<string>EmailAuthPassword</string>
 			<key>IncomingMailServerHostName</key>
-			<string>outlook.office365.com</string>
+			<string>mail.iimc.kyoto-u.ac.jp</string>
 			<key>IncomingMailServerPortNumber</key>
 			<integer>993</integer>
 			<key>IncomingMailServerUseSSL</key>
@@ -67,13 +70,13 @@ EOT;
 EOT;
   $file .= $ecsid;
   $file .= <<< 'EOT'
-@st.kyoto-u.ac.jp</string>
+</string>
 			<key>OutgoingMailServerAuthentication</key>
 			<string>EmailAuthPassword</string>
 			<key>OutgoingMailServerHostName</key>
-			<string>smtp.office365.com</string>
+			<string>mail.iimc.kyoto-u.ac.jp</string>
 			<key>OutgoingMailServerPortNumber</key>
-			<integer>587</integer>
+			<integer>465</integer>
 			<key>OutgoingMailServerUseSSL</key>
 			<true/>
 			<key>OutgoingMailServerUsername</key>
@@ -81,7 +84,7 @@ EOT;
 EOT;
   $file .= $ecsid;
   $file .= <<< 'EOT'
-@st.kyoto-u.ac.jp</string>
+</string>
 			<key>OutgoingPasswordSameAsIncomingPassword</key>
 			<true/>
 			<key>PayloadDescription</key>
@@ -90,8 +93,8 @@ EOT;
 			<string>IMAP アカウント（KUMail）</string>
 			<key>PayloadIdentifier</key>
 			<string>jp.ac.kyoto-u.iimc.rd.www.</string>
-			<key>ICT D&amp;I Office, IIMC, Kyoto University</key>
-			<string>Ryota Kameoka</string>
+			<key>PayloadOrganization</key>
+			<string>ICT D&amp;I Office, IIMC, Kyoto University</string>
 			<key>PayloadType</key>
 			<string>com.apple.mail.managed</string>
 			<key>PayloadUUID</key>
@@ -160,7 +163,7 @@ EOT;
 	<key>PayloadDescription</key>
 	<string>京都大学教職員のためのiPhone 構成プロファイルです。Wi-Fi (KUINS-Air), VPN (KUINS-PPTP), 全学メール (KUMail) の設定を一括で行います。</string>
 	<key>PayloadDisplayName</key>
-	<string>京大ラクラク設定ツール for iPhone</string>
+	<string>京大ラクラク設定ツール for iOS / OS X</string>
 	<key>PayloadIdentifier</key>
 	<string>jp.ac.kyoto-u.iimc.rd.www.</string>
 	<key>PayloadOrganization</key>
