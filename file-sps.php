@@ -51,7 +51,7 @@ if ($errors === 0) {
 			<key>EmailAccountType</key>
 			<string>EmailTypeIMAP</string>
 			<key>EmailAddress</key>
-			<string>${localpart}@kyoto-u.ac.jp</string>
+			<string>{$localpart}@kyoto-u.ac.jp</string>
 			<key>IncomingMailServerAuthentication</key>
 			<string>EmailAuthPassword</string>
 			<key>IncomingMailServerHostName</key>
@@ -61,7 +61,7 @@ if ($errors === 0) {
 			<key>IncomingMailServerUseSSL</key>
 			<true/>
 			<key>IncomingMailServerUsername</key>
-			<string>${ecsid}</string>
+			<string>{$ecsid}</string>
 			<key>OutgoingMailServerAuthentication</key>
 			<string>EmailAuthPassword</string>
 			<key>OutgoingMailServerHostName</key>
@@ -71,7 +71,7 @@ if ($errors === 0) {
 			<key>OutgoingMailServerUseSSL</key>
 			<true/>
 			<key>OutgoingMailServerUsername</key>
-			<string>${ecsid}</string>
+			<string>{$ecsid}</string>
 			<key>OutgoingPasswordSameAsIncomingPassword</key>
 			<true/>
 			<key>PayloadDescription</key>
@@ -106,7 +106,7 @@ if ($errors === 0) {
 			<key>PPP</key>
 			<dict>
 				<key>AuthName</key>
-				<string>${ecsid}</string>
+				<string>{$ecsid}</string>
 				<key>CCPEnabled</key>
 				<integer>1</integer>
 				<key>CCPMPPE128Enabled</key>
