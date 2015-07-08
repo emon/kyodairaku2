@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <meta name="keywords" content="京大,京都大学,iPhone,設定,Wi-Fi,無線LAN,MIAKO,VPN,KUINS_PPTP,メール,KUMOI">
-    <meta name="description" content="入力された情報に基づき、Wi-Fi (MIAKO), VPN (KUINS-PPTP), 学生用メール (KUMOI) の設定を一括で行う iPhone 構成プロファイルを作成します。">
+    <meta name="keywords" content="京大,京都大学,iPhone,設定,Wi-Fi,無線LAN,MIAKO,VPN,KUINS_PPTP,メール">
+    <meta name="description" content="入力された情報に基づき、Wi-Fi (MIAKO), VPN (KUINS-PPTP), の設定を一括で行う iPhone 構成プロファイルを作成します。">
     <meta property="og:title" content="京大ラクラク設定ツール for iPhone">
     <meta property="og:type" content="website">
     <meta property="og:url" content="http://kyodairaku2.ryota-ka.me/">
@@ -12,7 +12,7 @@
     <meta property="og:description" content="入力された情報に基づき、Wi-Fi (MIAKO), VPN (KUINS-PPTP), 学生用メール (KUMOI) の設定を一括で行う iPhone 構成プロファイルを作成します。">
     <meta property="og:site_name" content="京大ラクラク設定ツール for iPhone">
     <link rel="stylesheet" href="./style.css" type="text/css">
-    <script src="validate.js"></script>
+    <script src="validate-sps.js"></script>
     <title>京大ラクラク設定ツール for iPhone</title>
   </head>
   <body>
@@ -20,7 +20,7 @@
 
     <p class="right">created by <a href="http://ryota-ka.me/">Ryota Kameoka</a>
     <br />modified by <a href="http://www.rd.iimc.kyoto-u.ac.jp/aboutus.htm">ICT Design and Innovation Office </a></p>
-    <p>入力された情報に基づき、Wi-Fi (MIAKO), VPN (KUINS-PPTP), 学生用メール (KUMOI) の設定を一括で行う iPhone 構成プロファイルを作成します。</p>
+    <p>入力された情報に基づき、Wi-Fi (KUINS-Air), VPN (KUINS-PPTP), 全学メール (KUMail) の設定を一括で行う iPhone 構成プロファイルを作成します。</p>
 
     <hr>
 
@@ -28,12 +28,12 @@
 
     <hr>
 
-    <form action="file.php" method="post">
-      <p>ECS-ID</p>
-      <input id="input-ecsid" type="text" name="ecsid" placeholder="a0123456" onblur="validate();">
-      <p>学生用メールアドレス</p>
-      <input id="input-localpart" type="text" name="localpart" placeholder="kyodai.taro.01a" onblur="validate();">
-      <p class="right" style="color: #888;">@st.kyoto-u.ac.jp</p>
+    <form action="file-sps.php" method="post">
+      <p>SPS-ID</p>
+      <input id="input-ecsid" type="text" name="ecsid" placeholder="taro000kyodai" onblur="validate();">
+      <p>全学用メールアドレス</p>
+      <input id="input-localpart" type="text" name="localpart" placeholder="kyodai.taro.0a" onblur="validate();">
+      <p class="right" style="color: #888;">@kyoto-u.ac.jp</p>
       <input id="input-submit" type="submit" value="ダウンロード" disabled="disabled">
     </form>
     <hr>
