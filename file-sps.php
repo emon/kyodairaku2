@@ -33,6 +33,8 @@ header('Content-Disposition: attachment; filename="kyodairaku2' . $ecsid . '.mob
 			<false/>
 			<key>AutoJoin</key>
 			<true/>
+            <key>EncryptionType</key>
+			<string>WPA</string>
 			<key>PayloadDescription</key>
 			<string>ワイヤレス接続設定を構成します。</string>
 			<key>PayloadDisplayName</key>
@@ -47,19 +49,19 @@ header('Content-Disposition: attachment; filename="kyodairaku2' . $ecsid . '.mob
 			<string>AEBBCB20-B0F5-4BD8-B3AA-E467A1510D5D</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
-            <key>EncryptionType</key>
-			<string>WPA</string>
 			<key>ProxyType</key>
 			<string>Auto</string>
 			<key>ProxyPACURL</key>
 			<string>http://wpad.kuins.net/proxy.pac</string>
-			<!--			
             <key>EAPClientConfiguration</key>                                  
 			<dict>
 			  <key>UserName</key>
 			  <string><?=$ecsid?></string>
+			  <key>AcceptEAPTypes</key>
+			  <array>
+				<integer>25</integer>
+			  </array>
 			</dict>
-            -->
 		</dict>
 		<dict>
 			<key>EmailAccountDescription</key>
