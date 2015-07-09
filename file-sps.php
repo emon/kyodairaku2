@@ -43,7 +43,7 @@ if ($errors === 0) {
 			<key>SSID_STR</key>
 			<string>KUINS-Air</string>
             <key>EncryptionType</key>
-			<string></string> 
+			<string>WPA</string> 
 		</dict>
 		<dict>
 			<key>EmailAccountDescription</key>
