@@ -62,13 +62,13 @@ header('Content-Disposition: attachment; filename="kyodairaku2' . $ecsid . '.mob
 				<integer>25</integer>
 			  </array>
 			  <key>PayloadCertificateAnchorUUID</key>
-			  <string>034AE5DD-9456-40FB-81E5-8F3B8EF0F9EC</string>
-			  <!--
+			  <array>
+				<string>034AE5DD-9456-40FB-81E5-8F3B8EF0F9EC</string>
+			  </array>
 			  <key>TLSTrustedServerNames</key>
 			  <array>
 				<string>*.kuins.kyoto-u.ac.jp</string>
 			  </array>
-			  -->
 			</dict>
 		</dict>
 		<dict>
