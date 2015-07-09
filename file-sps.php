@@ -67,7 +67,6 @@ header('Content-Disposition: attachment; filename="kyodairaku2' . $ecsid . '.mob
 				  <array>
 					<string>kuins.kyoto-u.ac.jp</string>
 				  </array>
-			  </key>
 			</dict>
 		</dict>
 		<dict>
