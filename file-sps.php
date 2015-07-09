@@ -49,11 +49,11 @@ header('Content-Disposition: attachment; filename="kyodairaku2' . $ecsid . '.mob
 			<integer>1</integer>
             <key>EncryptionType</key>
 			<string>WPA</string>
-			<!--
 			<key>ProxyType</key>
 			<string>Auto</string>
 			<key>ProxyPACURL</key>
 			<string>http://wpad.kuins.net/proxy.pac</string>
+			<!--			
             <key>EAPClientConfiguration</key>                                  
 			<dict>
 			  <key>UserName</key>
