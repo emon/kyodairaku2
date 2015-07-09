@@ -12,7 +12,7 @@ if (!preg_match('/^[a-z]+\.[a-z]+\.[a-z0-9]{2,2}$/', $localpart)) {
   $errors += 2;
 }
 if ($errors === 0) {
-  $file = <<<'EOT'
+  $file = <<<EOT
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -51,12 +51,7 @@ if ($errors === 0) {
 			<key>EmailAccountType</key>
 			<string>EmailTypeIMAP</string>
 			<key>EmailAddress</key>
-			<string>
-EOT;
-  $file .= $localpart;
-  $file .= <<< 'EOT'
-@kyoto-u.ac.jp
-</string>
+			<string>{$localpart}@kyoto-u.ac.jp</string>
 			<key>IncomingMailServerAuthentication</key>
 			<string>EmailAuthPassword</string>
 			<key>IncomingMailServerHostName</key>
@@ -66,11 +61,7 @@ EOT;
 			<key>IncomingMailServerUseSSL</key>
 			<true/>
 			<key>IncomingMailServerUsername</key>
-			<string>
-EOT;
-  $file .= $ecsid;
-  $file .= <<< 'EOT'
-</string>
+			<string>{$ecsid}</string>
 			<key>OutgoingMailServerAuthentication</key>
 			<string>EmailAuthPassword</string>
 			<key>OutgoingMailServerHostName</key>
@@ -80,11 +71,7 @@ EOT;
 			<key>OutgoingMailServerUseSSL</key>
 			<true/>
 			<key>OutgoingMailServerUsername</key>
-			<string>
-EOT;
-  $file .= $ecsid;
-  $file .= <<< 'EOT'
-</string>
+			<string>{$ecsid}</string>
 			<key>OutgoingPasswordSameAsIncomingPassword</key>
 			<true/>
 			<key>PayloadDescription</key>
@@ -119,11 +106,7 @@ EOT;
 			<key>PPP</key>
 			<dict>
 				<key>AuthName</key>
-				<string>
-EOT;
-  $file .= $ecsid;
-  $file .= <<< 'EOT'
-</string>
+				<string>{$ecsid}</string>
 				<key>CCPEnabled</key>
 				<integer>1</integer>
 				<key>CCPMPPE128Enabled</key>
@@ -178,7 +161,6 @@ EOT;
 	<integer>1</integer>
 </dict>
 </plist>
-
 EOT;
 
   header('Content-type: application/x-apple-aspen-config; chatset=utf-8');
