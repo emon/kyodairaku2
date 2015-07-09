@@ -27,10 +27,6 @@ header('Content-Disposition: attachment; filename="kyodairaku2' . $ecsid . '.mob
 	<key>PayloadContent</key>
 	<array>
 		<dict>
-			<key>AutoJoin</key>
-			<true/>
-			<key>HIDDEN_NETWORK</key>
-			<false/>
 			<key>PayloadDescription</key>
 			<string>ワイヤレス接続設定を構成します。</string>
 			<key>PayloadDisplayName</key>
@@ -45,12 +41,23 @@ header('Content-Disposition: attachment; filename="kyodairaku2' . $ecsid . '.mob
 			<string>AEBBCB20-B0F5-4BD8-B3AA-E467A1510D5D</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
-			<key>ProxyType</key>
-			<string>None</string>
 			<key>SSID_STR</key>
 			<string>KUINS-Air</string>
+			<key>AutoJoin</key>
+			<true/>
+			<key>HIDDEN_NETWORK</key>
+			<false/>
+			<key>ProxyType</key>
+			<string>Auto</string>
+			<key>ProxyPACURL</key>
+			<string>http://wpad.kuins.net/proxy.pac</string>
             <key>EncryptionType</key>
-			<string>WPA</string> 
+			<string>WPA</string>
+            <key>EAPClientConfiguration</key>                                  
+			<dict>
+			  <key>UserName</key>
+			  <string><?=$ecsid?></string>
+			</dict>
 		</dict>
 		<dict>
 			<key>EmailAccountDescription</key>
