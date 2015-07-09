@@ -40,7 +40,7 @@ header('Content-Disposition: attachment; filename="kyodairaku2' . $ecsid . '.mob
 			<key>PayloadDisplayName</key>
 			<string>Wi-Fi（KUINS-Air）</string>
 			<key>PayloadIdentifier</key>
-			<string>jp.ac.kyoto-u.iimc.rd.www.</string>
+			<string>jp.ac.kyoto-u.iimc.rd.www.conf-air</string>
 			<key>PayloadOrganization</key>
 			<string>ICT D&amp;I Office, IIMC, Kyoto University</string>
 			<key>PayloadType</key>
@@ -61,7 +61,60 @@ header('Content-Disposition: attachment; filename="kyodairaku2' . $ecsid . '.mob
 			  <array>
 				<integer>25</integer>
 			  </array>
+			  <key>PayloadCertificateAnchorUUID</key>
+			  <string>034AE5DD-9456-40FB-81E5-8F3B8EF0F9EC</string>
+			  <key>TLSTrustedServerNames<key>
+				  <array>
+					<string>kuins.kyoto-u.ac.jp</string>
+				  </array>
+			  </key>
 			</dict>
+		</dict>
+		<dict>
+		  <key>PayloadType</key>
+		  <string>com.apple.security.pem</string>
+		  <key>PayloadUUID</key>
+		  <string>034AE5DD-9456-40FB-81E5-8F3B8EF0F9EC</string>
+		  <key>PayloadCertificateFileName</key>
+		  <string>rad.kuins.kyoto-u.ac.jp.cer</string>
+		  <key>PayloadIdentifier</key>
+		  <string>jp.ac.kyoto-u.iimc.rd.www.conf-cert</string>
+		  <key>PayloadDescription</key>
+		  <string>KUINS-Airネットワークの安全な接続を保守する証明書です</string>
+		  <key>PayloadDisplayName</key>
+		  <string>KUINS-Air Radiusサーバ証明書</string>
+		  <key>PayloadVersion</key>
+		  <integer>1</integer>
+		  <key>PayloadContent</key>
+		  <data>
+			MIIFDDCCA/SgAwIBAgIIcq/T54dBVNcwDQYJKoZIhvcNAQELBQAwbTELMAkGA1UE
+			BhMCSlAxEDAOBgNVBAcTB0FjYWRlbWUxKjAoBgNVBAoTIU5hdGlvbmFsIEluc3Rp
+			dHV0ZSBvZiBJbmZvcm1hdGljczEgMB4GA1UEAxMXTklJIE9wZW4gRG9tYWluIENB
+			IC0gRzQwHhcNMTUwNjExMDQ0MjA2WhcNMTcwNzExMDQ0MjA2WjCBnTELMAkGA1UE
+			BhMCSlAxEDAOBgNVBAcTB0FjYWRlbWUxGTAXBgNVBAoTEEt5b3RvIFVuaXZlcnNp
+			dHkxPzA9BgNVBAsTNkt5b3RvIFVuaXZlcnNpdHkgSW50ZWdyYXRlZCBJbmZvcm1h
+			dGlvbiBOZXR3b3JrIFN5c3RlbTEgMB4GA1UEAxMXcmFkLmt1aW5zLmt5b3RvLXUu
+			YWMuanAwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC8WjPZMJjxFe9U
+			shRGljR888dXVo59q59SuGlTuTxPRZj85/obUGBhHOQQgsBIXpbJsDQULaCN7lcE
+			srpZH13Saefhg1yND9WMROw0rJKItW0Qi57cvRxjk3m9IjZRDsRl6eczl0I7cK06
+			qPhg8uBn7lbBDRVdJ/VXvAFyMNaZAOfYWtNcyfMf5/oc6dXyWQCjDG+pl9iPRkmO
+			ngJvAHzsX4AmvmjxMKzQ2+MaQg75KhV7O4SHK+rC9pT63nWMGrnGyUW+4fxyjV6r
+			54iQ13XfyYRyI894h536gp/ZdMQ28MKJXTBd99UcoFA6uU2sHXMsXPhxhRunxuUH
+			6HwqHcYJAgMBAAGjggF9MIIBeTAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUH
+			AwIwHwYDVR0jBBgwFoAUGQtvOR8xAzRf5NJAHzfmjediOXwwSgYDVR0fBEMwQTA/
+			oD2gO4Y5aHR0cDovL3JlcG8xLnNlY29tdHJ1c3QubmV0L3NwcGNhL25paS9vZGNh
+			My9mdWxsY3JsZzQuY3JsMA4GA1UdDwEB/wQEAwIFoDAdBgNVHQ4EFgQUm4fIXvou
+			wCTFoaPAFrVr1MQmkoEwWgYDVR0gBFMwUTBPBgwrBgEEAYH8CAMCAQEwPzA9Bggr
+			BgEFBQcCARYxaHR0cHM6Ly9yZXBvMS5zZWNvbXRydXN0Lm5ldC9zcGNwcC9jcHMv
+			aW5kZXguaHRtbDA8BggrBgEFBQcBAQQwMC4wLAYIKwYBBQUHMAGGIGh0dHA6Ly9u
+			aWlnNC5vY3NwLnNlY29tdHJ1c3QubmV0MCIGA1UdEQQbMBmCF3JhZC5rdWlucy5r
+			eW90by11LmFjLmpwMA0GCSqGSIb3DQEBCwUAA4IBAQAY0GJSgR9CanqDMTaK9IcF
+			Nb1JkE5JykqGgwHLWt6OXdwUg7ZayDCKJEhN2veiPYF1EyLPKZ2lzwdW3W0wJVnr
+			Cvi0fQ6nXqdxL902Ke2HziXu36mtTr+7Zrsnqm7dNOVhI/JFLQsbCUS+yR9AbzHY
+			GLY6c4ExkFn9iyi6dyTaVsZQC1bO9gUN/uLZbsGk4Jlbwd6pCI/j8FtVYn2g/NP+
+			tfhxWKLCRdEb8behJXvxv226XKWnrhnUoNqoUbGHUwfaAuvioDR3I9g2OSZckaLb
+			vDJe8EtidKsO+vB1GlWnPeLTvKS2qTeCJC+X40bQVSQYwUgTRWc8HGoZtqsyEYMJ
+		  </data>
 		</dict>
 		<dict>
 			<key>EmailAccountDescription</key>
@@ -97,7 +150,7 @@ header('Content-Disposition: attachment; filename="kyodairaku2' . $ecsid . '.mob
 			<key>PayloadDisplayName</key>
 			<string>IMAP アカウント（KUMail）</string>
 			<key>PayloadIdentifier</key>
-			<string>jp.ac.kyoto-u.iimc.rd.www.</string>
+			<string>jp.ac.kyoto-u.iimc.rd.www.conf-kumail</string>
 			<key>PayloadOrganization</key>
 			<string>ICT D&amp;I Office, IIMC, Kyoto University</string>
 			<key>PayloadType</key>
@@ -139,7 +192,7 @@ header('Content-Disposition: attachment; filename="kyodairaku2' . $ecsid . '.mob
 			<key>PayloadDisplayName</key>
 			<string>VPN（KUINS-PPTP）</string>
 			<key>PayloadIdentifier</key>
-			<string>jp.ac.kyoto-u.iimc.rd.www.</string>
+			<string>jp.ac.kyoto-u.iimc.rd.www.conf-pptp</string>
 			<key>PayloadOrganization</key>
 			<string>ICT D&amp;I Office, IIMC, Kyoto University</string>
 			<key>PayloadType</key>
@@ -166,7 +219,7 @@ header('Content-Disposition: attachment; filename="kyodairaku2' . $ecsid . '.mob
 	<key>PayloadDisplayName</key>
 	<string>京大ラクラク設定ツール for iOS / OS X</string>
 	<key>PayloadIdentifier</key>
-	<string>jp.ac.kyoto-u.iimc.rd.www.</string>
+	<string>jp.ac.kyoto-u.iimc.rd.www.conf</string>
 	<key>PayloadOrganization</key>
 	<string>ICT D&amp;I Office, IIMC, Kyoto University</string>
 	<key>PayloadRemovalDisallowed</key>
