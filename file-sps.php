@@ -27,6 +27,12 @@ header('Content-Disposition: attachment; filename="kyodairaku2' . $ecsid . '.mob
 	<key>PayloadContent</key>
 	<array>
 		<dict>
+			<key>SSID_STR</key>
+			<string>KUINS-Air</string>
+			<key>HIDDEN_NETWORK</key>
+			<false/>
+			<key>AutoJoin</key>
+			<true/>
 			<key>PayloadDescription</key>
 			<string>ワイヤレス接続設定を構成します。</string>
 			<key>PayloadDisplayName</key>
@@ -41,12 +47,6 @@ header('Content-Disposition: attachment; filename="kyodairaku2' . $ecsid . '.mob
 			<string>AEBBCB20-B0F5-4BD8-B3AA-E467A1510D5D</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
-			<key>SSID_STR</key>
-			<string>KUINS-Air</string>
-			<key>AutoJoin</key>
-			<true/>
-			<key>HIDDEN_NETWORK</key>
-			<false/>
 			<key>ProxyType</key>
 			<string>Auto</string>
 			<key>ProxyPACURL</key>
