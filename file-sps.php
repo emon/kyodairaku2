@@ -11,8 +11,15 @@ if (!preg_match('/^[a-z]+[0-9]{3,3}[a-z]+$/', $ecsid)) {
 if (!preg_match('/^[a-z]+\.[a-z]+\.[a-z0-9]{2,2}$/', $localpart)) {
   $errors += 2;
 }
-if ($errors === 0) {
-  $file = <<<EOT
+if ($errors !== 0) {
+  echo 'invalid values!';
+  exit($errors);
+}
+
+header('Content-type: application/x-apple-aspen-config; chatset=utf-8');
+header('Content-Disposition: attachment; filename="kyodairaku2' . $ecsid . '.mobileconfig"');
+?>    
+
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -51,7 +58,7 @@ if ($errors === 0) {
 			<key>EmailAccountType</key>
 			<string>EmailTypeIMAP</string>
 			<key>EmailAddress</key>
-			<string>{$localpart}@kyoto-u.ac.jp</string>
+			<string><?=$localpart?>@kyoto-u.ac.jp</string>
 			<key>IncomingMailServerAuthentication</key>
 			<string>EmailAuthPassword</string>
 			<key>IncomingMailServerHostName</key>
@@ -61,7 +68,7 @@ if ($errors === 0) {
 			<key>IncomingMailServerUseSSL</key>
 			<true/>
 			<key>IncomingMailServerUsername</key>
-			<string>{$ecsid}</string>
+			<string><?=$ecsid?></string>
 			<key>OutgoingMailServerAuthentication</key>
 			<string>EmailAuthPassword</string>
 			<key>OutgoingMailServerHostName</key>
@@ -71,7 +78,7 @@ if ($errors === 0) {
 			<key>OutgoingMailServerUseSSL</key>
 			<true/>
 			<key>OutgoingMailServerUsername</key>
-			<string>{$ecsid}</string>
+			<string><?=$ecsid?></string>
 			<key>OutgoingPasswordSameAsIncomingPassword</key>
 			<true/>
 			<key>PayloadDescription</key>
@@ -106,7 +113,7 @@ if ($errors === 0) {
 			<key>PPP</key>
 			<dict>
 				<key>AuthName</key>
-				<string>{$ecsid}</string>
+				<string><?=$ecsid?></string>
 				<key>CCPEnabled</key>
 				<integer>1</integer>
 				<key>CCPMPPE128Enabled</key>
@@ -161,11 +168,3 @@ if ($errors === 0) {
 	<integer>1</integer>
 </dict>
 </plist>
-EOT;
-
-  header('Content-type: application/x-apple-aspen-config; chatset=utf-8');
-  header('Content-Disposition: attachment; filename="kyodairaku2' . $ecsid . '.mobileconfig"');
-  echo $file;
-} else {
-  echo 'invalid values!';
-}
