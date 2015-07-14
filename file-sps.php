@@ -184,7 +184,7 @@ header('Content-Disposition: attachment; filename="kyodairaku2' . $ecsid . '.mob
 				<key>CCPMPPE128Enabled</key>
 				<integer>1</integer>
 				<key>CCPMPPE40Enabled</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>CommRemoteAddress</key>
 				<string>pptp0.kuins.kyoto-u.ac.jp</string>
 			</dict>
