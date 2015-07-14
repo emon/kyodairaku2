@@ -2,7 +2,7 @@
 
 $ecsid = trim(filter_input(INPUT_POST, 'ecsid'));
 $localpart = trim(filter_input(INPUT_POST, 'localpart'));
-$localpart = trim(filter_input(INPUT_POST, 'isecs'));
+#$is_ecs = trim(filter_input(INPUT_POST, 'is_ecs'));
 
 $errors = 0;
 
@@ -12,6 +12,7 @@ if (!preg_match('/^[a-z]+[0-9]{3,3}[a-z]+$/', $ecsid)) {
 if (!preg_match('/^[a-z]+\.[a-z]+\.[a-z0-9]{2,2}$/', $localpart)) {
   $errors += 2;
 }
+
 if ($errors !== 0) {
   echo 'invalid values!';
   exit($errors);
