@@ -40,7 +40,7 @@ function validate() {
     isLocalpartValid = false;
   }
 
-  if ((isEcsIdValid && isLocalpartValid) && submit.attributes.disabled == 'disabled') {
+	if (isEcsIdValid && isLocalpartValid) {
     submit.removeAttribute('disabled');
   } else {
     submit.attributes.disabled = 'disabled';
