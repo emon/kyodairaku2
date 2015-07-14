@@ -85,6 +85,10 @@ p.right {
   color: #bbb;
 }
 
+div.center {
+  text-align: center;
+}
+
 input[type="submit"] {
   width: 70%;
   height: 48px;
@@ -118,12 +122,18 @@ h2 {
   margin-left: 10px;
 }
 
-img {
+img.screen {
   width: 95%;
   margin-top 10px;
   margin-bottom: 0;
   margin-left: 2.5%;
   max-width: 640px;
+}
+
+img.logo {
+  height: 60px;
+  margin-top 15px;
+  margin-bottom 0px;
 }
 
 .ads {

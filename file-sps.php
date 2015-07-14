@@ -2,6 +2,7 @@
 
 $ecsid = trim(filter_input(INPUT_POST, 'ecsid'));
 $localpart = trim(filter_input(INPUT_POST, 'localpart'));
+$localpart = trim(filter_input(INPUT_POST, 'isecs'));
 
 $errors = 0;
 
