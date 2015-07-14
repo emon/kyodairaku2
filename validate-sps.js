@@ -43,6 +43,6 @@ function validate() {
   if ((isEcsIdValid && isLocalpartValid) && submit.attributes.disabled) {
     submit.removeAttribute('disabled');
   } else {
-    submit.attributes.disabled = 'disabled';
+      submit.setAttribute('disabled', 'disabled');
   }
 }
